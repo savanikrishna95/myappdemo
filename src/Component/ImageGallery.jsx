@@ -72,7 +72,7 @@ const ImageGallery = () => {
 
     return (
         <div>
-            <button onClick={resetOrder}>Reset Order</button>
+            <button onClick={resetOrder}>Reset Order 12</button>
            
                 <button value="ALL">All</button>
                 <button   onClick={(e) => setSelectedCategory(e.target.value)} value="math">Math</button>
