@@ -99,7 +99,7 @@ const ImageGallery = () => {
                                             style={{ margin: '8px' }}
                                         >
                                           
-                                            <img src={img.photo_url} alt={img.alt} style={{ width: '100px', height: '100px' }} />
+                                            <img className="img_test" src={img.photo_url} alt={img.alt} style={{ width: '100px', height: '100px' }} />
                                         </div>
                                     )}
                                 </Draggable>
