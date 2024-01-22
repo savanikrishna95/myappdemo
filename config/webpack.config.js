@@ -339,6 +339,12 @@ module.exports = function (webpackEnv) {
     module: {
       strictExportPresence: true,
       rules: [
+
+        {
+          test: /\.css$/,
+          use: ['style-loader', 'css-loader', 'file-loader'],
+        },
+        
         // Handle node_modules packages that contain sourcemaps
         shouldUseSourceMap && {
           enforce: 'pre',
