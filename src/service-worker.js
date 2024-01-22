@@ -1,5 +1,7 @@
 
-setTimeout(() => 
-    window.location.reload(true)
-, 5000); 
+setTimeout(() => {
+    window.location.reload(true);
+    console.log("Fsdf");
+  }, 5000); 
+  
   
