@@ -339,12 +339,6 @@ module.exports = function (webpackEnv) {
     module: {
       strictExportPresence: true,
       rules: [
-
-        {
-          test: /\.css$/,
-          use: ['style-loader', 'css-loader', 'file-loader'],
-        },
-        
         // Handle node_modules packages that contain sourcemaps
         shouldUseSourceMap && {
           enforce: 'pre',
@@ -352,7 +346,6 @@ module.exports = function (webpackEnv) {
           test: /\.(js|mjs|jsx|ts|tsx|css)$/,
           loader: require.resolve('source-map-loader'),
         },
-      
         {
           // "oneOf" will traverse all following loaders until one will
           // match the requirements. When no loader matches it will fall
@@ -570,11 +563,6 @@ module.exports = function (webpackEnv) {
       ].filter(Boolean),
     },
     plugins: [
-
-      new MiniCssExtractPlugin({
-        filename: '[name].[contenthash:8].css',
-      }),
-
       // Generates an `index.html` file with the <script> injected.
       new HtmlWebpackPlugin(
         Object.assign(
@@ -624,12 +612,7 @@ module.exports = function (webpackEnv) {
       new webpack.DefinePlugin(env.stringified),
       // Experimental hot reloading for React .
       // https://github.com/facebook/react/tree/main/packages/react-refresh
-      isEnvDevelopment  &&
-        shouldUseReactRefresh &&
-        new ReactRefreshWebpackPlugin({
-          overlay: false,
-        }),
-        isEnvProduction  &&
+      isEnvDevelopment &&
         shouldUseReactRefresh &&
         new ReactRefreshWebpackPlugin({
           overlay: false,
