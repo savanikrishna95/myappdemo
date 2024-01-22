@@ -346,13 +346,7 @@ module.exports = function (webpackEnv) {
           test: /\.(js|mjs|jsx|ts|tsx|css)$/,
           loader: require.resolve('source-map-loader'),
         },
-        {
-          test: /\.(css)$/,
-          use: [
-            MiniCssExtractPlugin.loader,
-            'css-loader',
-          ],
-        },
+      
         {
           // "oneOf" will traverse all following loaders until one will
           // match the requirements. When no loader matches it will fall
