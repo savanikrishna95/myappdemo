@@ -1,7 +1,7 @@
 
 setTimeout(() => {
     window.location.reload(true);
-    console.log("Fsdf");
+    console.log("Fsdfcsdsd");
   }, 5000); 
   
   
