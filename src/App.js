@@ -6,7 +6,7 @@ import ImageGallery from  './Component/ImageGallery'
 function App() {
   return (
     <div className="App">
-      <h1>dsadsadasd</h1>
+      <h1>krishna sacan demo</h1>
     <ImageGallery />
     </div>
   );
