@@ -347,7 +347,7 @@ module.exports = function (webpackEnv) {
           loader: require.resolve('source-map-loader'),
         },
         {
-          test: /\.css$/,
+          test: /\.(css)$/,
           use: [
             MiniCssExtractPlugin.loader,
             'css-loader',
@@ -572,9 +572,9 @@ module.exports = function (webpackEnv) {
     plugins: [
 
       new MiniCssExtractPlugin({
-        filename: '[name].[contenthash].css',
+        filename: '[name].[contenthash:8].css',
       }),
-      
+
       // Generates an `index.html` file with the <script> injected.
       new HtmlWebpackPlugin(
         Object.assign(
